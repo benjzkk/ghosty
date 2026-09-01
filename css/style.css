@@ -180,4 +180,137 @@ main a:hover {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--accent
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+.meta {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.feature-card {
+  background: var(--bg-modifier);
+  padding: 1.25rem 1rem;
+  border-radius: var(--radius);
+  text-align: center;
+  border: 1px solid var(--border);
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.feature-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.feature-card h3 {
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+  color: #fff;
+}
+
+.feature-card p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 0;
+}
+
+.floating-invite {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 4px 16px rgba(88, 101, 242, 0.4);
+  transition: transform 0.2s ease, background 0.2s ease;
+  z-index: 100;
+}
+
+.floating-invite:hover {
+  transform: scale(1.05);
+  background: var(--accent-hover);
+}
+
+footer {
+  max-width: 860px;
+  width: 100%;
+  margin: 1.5rem auto 0;
+  padding: 1.25rem 1.25rem 2rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+footer p {
+  margin-bottom: 0.35rem;
+}
+
+footer a {
+  color: var(--text-link);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+body::before {
+  content: "";
+  display: block;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent), #eb459e, #57f287);
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    padding: 1.25rem 0.85rem 2rem;
+  }
+
+  header,
+  main {
+    padding: 1.25rem 1rem;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  main h2 {
+    font-size: 1.1rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .floating-invite {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    bottom: 1rem;
+    right: 1rem;
+  }
+}
+
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
